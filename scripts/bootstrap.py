@@ -64,6 +64,7 @@ def main():
         "-DBUILD_JAVA=OFF",
         "-DBUILD_opencv_python3=OFF",
         "-DWITH_IPP=OFF",
+        "-DWITH_ADE=OFF",
         "-DWITH_OPENEXR=OFF",
         "-DWITH_OPENCL=OFF",
         "-DWITH_FFMPEG=OFF",

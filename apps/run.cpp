@@ -1,6 +1,7 @@
 #include "cueframe/detector.hpp"
 #include <atomic>
 #include <chrono>
+#include <cmath>
 #include <filesystem>
 #include <fstream>
 #include <iostream>

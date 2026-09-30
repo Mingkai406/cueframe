@@ -15,7 +15,7 @@ Someone shows an object, moves it, then says “the previous one.” An interact
 
 ## What runs today
 
-- **Real model inference.** OpenCV DNN executes a checksum-pinned YOLOX-s ONNX model on CPU, with letterboxing, anchor decoding, class-aware NMS, and source-coordinate recovery.
+- **Real model inference.** OpenCV DNN executes a checksum-pinned YOLOX-s ONNX model on CPU, with letterboxing, grid/stride decoding, class-aware NMS, and source-coordinate recovery.
 - **Bounded streaming.** Capture and inference run independently. Compare oldest-frame eviction with bounded FIFO admission at the same queue capacity.
 - **Temporal references.** Select a visible class, the left/right instance, a normalized image point, or a previous retained observation. Ambiguity produces clarification.
 - **Response checks.** Suppress pending answers after a new turn, source reset, target change, loss of observation, or evidence expiry. Historical references keep their own evidence timestamp.

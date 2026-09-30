@@ -17,11 +17,15 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/cache@v4
+      - uses: actions/cache/restore@v4
         with:
           path: .deps
-          key: opencv-4.12.0-linux-minimal-v1
+          key: opencv-4.12.0-linux-minimal-v2
       - run: python3 scripts/bootstrap.py --opencv --jobs 4
+      - uses: actions/cache/save@v4
+        with:
+          path: .deps
+          key: opencv-4.12.0-linux-minimal-v2
       - run: cmake -S . -B build -DCMAKE_PREFIX_PATH="$PWD/.deps/opencv-install" -DCMAKE_BUILD_TYPE=Release
       - run: cmake --build build -j 2
       - run: ctest --test-dir build --output-on-failure

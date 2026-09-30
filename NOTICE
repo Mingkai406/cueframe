@@ -6,7 +6,7 @@ CueFrame source is licensed under MIT. External components retain their own lice
 OpenCV 4.12.0: Apache-2.0; https://github.com/opencv/opencv
 YOLOX / OpenCV Zoo model and decoding reference: Apache-2.0.
 https://github.com/opencv/opencv_zoo/tree/47534e27c9851bb1128ccc0102f1145e27f23f98/models/object_detection_yolox
-The detector's preprocessing and anchor decoding follow this public model contract.
+The detector's preprocessing and grid/stride decoding follow this public model contract.
 Model license is included at models/LICENSE-YOLOX. Model weights are downloaded separately.
 
 Coffee photograph: Rachel Michetti, CC0, courtesy of Pikolo Espresso Bar;
