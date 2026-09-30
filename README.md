@@ -3,7 +3,7 @@
 <h1>CueFrame</h1>
 <p><strong>Visual evidence for real-time human–AI interaction.</strong></p>
 <p>A C++ runtime that connects current observations and retained history to a response — and checks whether that response still belongs.</p>
-<p><a href="https://mingkai406.github.io/cueframe/">Interactive project page</a> · <a href="#quick-start">Run locally</a> · <a href="docs/architecture.md">Architecture</a> · <a href="docs/research.md">Research direction</a></p>
+<p><a href="https://mingkai406.github.io/cueframe/">Interactive project page</a> · <a href="#quick-start">Run locally</a> · <a href="docs/architecture.md">Architecture</a></p>
 <img src="https://github.com/Mingkai406/cueframe/actions/workflows/ci.yml/badge.svg" alt="Build and test status">
 </div>
 
@@ -11,7 +11,7 @@
 
 Someone shows an object, moves it, then says “the previous one.” An interactive system needs both a current view and a memory of what the person could be referring to. CueFrame makes that boundary explicit: observations carry timestamps, references select evidence, and pending responses are rechecked before publication.
 
-**v0.1 is a working engineering prototype:** local YOLOX-s inference, bounded C++ concurrency, object association, finite reference commands, cancellable pending responses, trace replay, and reproducible measurements. Free-form language, gesture/expression interpretation, and learned multimodal dialogue are research extensions.
+**v0.1 is a working engineering prototype:** local YOLOX-s inference, bounded C++ concurrency, object association, finite reference commands, cancellable pending responses, trace replay, and reproducible measurements.
 
 ## What runs today
 
@@ -125,12 +125,6 @@ ctest --test-dir build-core --output-on-failure
 ```
 
 Object association is a conservative same-class IoU heuristic, not robust re-identification. History is bounded to 96 observations, not a fixed duration. See [architecture and limits](docs/architecture.md).
-
-## Research trajectory
-
-The independent question is how an agent should align a person's references with changing visual evidence and recover after correction. A future VOICE adapter could pass evidence into expert-defined patient behavior, while keeping perception separate from what a simulated patient is capable of understanding. No clinical validation or VOICE integration is claimed here.
-
-[Research plan and related work](docs/research.md) · [Source and model credits](NOTICE)
 
 ## License
 
