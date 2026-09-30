@@ -1,0 +1,1 @@
+{"version":"0.1.0","opencv":"4.12.0","model":"YOLOX-s FP32 / OpenCV CPU","policy":"latest","capacity":4,"source_fps":30,"paced":true,"threads":2,"produced":240,"processed":108,"dropped":132,"queue_high_water":4,"warmup_ms":116.008,"peak_rss_mb":343.297,"wall_ms":8285.56,"response_delay_ms":400,"published":3,"suppressed":2,"clarified":1,"dropped_queries":0}

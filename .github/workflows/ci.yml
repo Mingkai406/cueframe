@@ -1,0 +1,32 @@
+name: build-and-test
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  core:
+    strategy:
+      matrix:
+        os: [ubuntu-24.04, macos-14]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: cmake -S . -B build -DCUEFRAME_VISION=OFF -DCUEFRAME_SANITIZE=ON -DCMAKE_BUILD_TYPE=Debug
+      - run: cmake --build build -j 2
+      - run: ctest --test-dir build --output-on-failure
+  vision:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        with:
+          path: .deps
+          key: opencv-4.12.0-linux-minimal-v1
+      - run: python3 scripts/bootstrap.py --opencv --jobs 4
+      - run: cmake -S . -B build -DCMAKE_PREFIX_PATH="$PWD/.deps/opencv-install" -DCMAKE_BUILD_TYPE=Release
+      - run: cmake --build build -j 2
+      - run: ctest --test-dir build --output-on-failure
+      - run: ./build/cueframe_run --input examples/coffee.png --frames 2 --offline --out runs/ci
+      - uses: actions/upload-artifact@v4
+        with:
+          name: real-model-trace
+          path: runs/ci

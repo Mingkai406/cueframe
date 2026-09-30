@@ -1,0 +1,1653 @@
+{
+  "observations": [
+    {
+      "frame": 0,
+      "media_ms": 0,
+      "tracks": [
+        {
+          "id": 1,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.826241,
+          "visible": true,
+          "box": [
+            0.275,
+            0.035,
+            0.426667,
+            0.7225
+          ]
+        },
+        {
+          "id": 2,
+          "revision": 1,
+          "label": "dining table",
+          "confidence": 0.534806,
+          "visible": true,
+          "box": [
+            0.0216667,
+            0.0075,
+            0.963333,
+            0.9725
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 1,
+          "label": "spoon",
+          "confidence": 0.427287,
+          "visible": true,
+          "box": [
+            0.538333,
+            0.3175,
+            0.148333,
+            0.49
+          ]
+        }
+      ],
+      "image": "data/frame-0.jpg"
+    },
+    {
+      "frame": 10,
+      "media_ms": 333.333,
+      "tracks": [
+        {
+          "id": 1,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.826241,
+          "visible": true,
+          "box": [
+            0.275,
+            0.035,
+            0.426667,
+            0.7225
+          ]
+        },
+        {
+          "id": 2,
+          "revision": 1,
+          "label": "dining table",
+          "confidence": 0.534806,
+          "visible": true,
+          "box": [
+            0.0216667,
+            0.0075,
+            0.963333,
+            0.9725
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 1,
+          "label": "spoon",
+          "confidence": 0.427287,
+          "visible": true,
+          "box": [
+            0.538333,
+            0.3175,
+            0.148333,
+            0.49
+          ]
+        }
+      ],
+      "image": "data/frame-10.jpg"
+    },
+    {
+      "frame": 21,
+      "media_ms": 700,
+      "tracks": [
+        {
+          "id": 1,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.826241,
+          "visible": true,
+          "box": [
+            0.275,
+            0.035,
+            0.426667,
+            0.7225
+          ]
+        },
+        {
+          "id": 2,
+          "revision": 1,
+          "label": "dining table",
+          "confidence": 0.534806,
+          "visible": true,
+          "box": [
+            0.0216667,
+            0.0075,
+            0.963333,
+            0.9725
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 1,
+          "label": "spoon",
+          "confidence": 0.427287,
+          "visible": true,
+          "box": [
+            0.538333,
+            0.3175,
+            0.148333,
+            0.49
+          ]
+        }
+      ],
+      "image": "data/frame-21.jpg"
+    },
+    {
+      "frame": 32,
+      "media_ms": 1066.67,
+      "tracks": [
+        {
+          "id": 1,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.826241,
+          "visible": true,
+          "box": [
+            0.275,
+            0.035,
+            0.426667,
+            0.7225
+          ]
+        },
+        {
+          "id": 2,
+          "revision": 1,
+          "label": "dining table",
+          "confidence": 0.534806,
+          "visible": true,
+          "box": [
+            0.0216667,
+            0.0075,
+            0.963333,
+            0.9725
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 1,
+          "label": "spoon",
+          "confidence": 0.427287,
+          "visible": true,
+          "box": [
+            0.538333,
+            0.3175,
+            0.148333,
+            0.49
+          ]
+        }
+      ],
+      "image": "data/frame-32.jpg"
+    },
+    {
+      "frame": 41,
+      "media_ms": 1366.67,
+      "tracks": [
+        {
+          "id": 1,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.826241,
+          "visible": true,
+          "box": [
+            0.275,
+            0.035,
+            0.426667,
+            0.7225
+          ]
+        },
+        {
+          "id": 2,
+          "revision": 1,
+          "label": "dining table",
+          "confidence": 0.534806,
+          "visible": true,
+          "box": [
+            0.0216667,
+            0.0075,
+            0.963333,
+            0.9725
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 1,
+          "label": "spoon",
+          "confidence": 0.427287,
+          "visible": true,
+          "box": [
+            0.538333,
+            0.3175,
+            0.148333,
+            0.49
+          ]
+        }
+      ],
+      "image": "data/frame-41.jpg"
+    },
+    {
+      "frame": 52,
+      "media_ms": 1733.33,
+      "tracks": [
+        {
+          "id": 1,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.826241,
+          "visible": true,
+          "box": [
+            0.275,
+            0.035,
+            0.426667,
+            0.7225
+          ]
+        },
+        {
+          "id": 2,
+          "revision": 1,
+          "label": "dining table",
+          "confidence": 0.534806,
+          "visible": true,
+          "box": [
+            0.0216667,
+            0.0075,
+            0.963333,
+            0.9725
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 1,
+          "label": "spoon",
+          "confidence": 0.427287,
+          "visible": true,
+          "box": [
+            0.538333,
+            0.3175,
+            0.148333,
+            0.49
+          ]
+        }
+      ],
+      "image": "data/frame-52.jpg"
+    },
+    {
+      "frame": 63,
+      "media_ms": 2100,
+      "tracks": [
+        {
+          "id": 1,
+          "revision": 2,
+          "label": "cup",
+          "confidence": 0.770877,
+          "visible": true,
+          "box": [
+            0.286667,
+            0.025,
+            0.435,
+            0.7525
+          ]
+        },
+        {
+          "id": 2,
+          "revision": 1,
+          "label": "dining table",
+          "confidence": 0.500099,
+          "visible": true,
+          "box": [
+            0.0183333,
+            0.0075,
+            0.98,
+            0.9825
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 3,
+          "label": "spoon",
+          "confidence": 0.480792,
+          "visible": true,
+          "box": [
+            0.553333,
+            0.31,
+            0.148333,
+            0.5
+          ]
+        }
+      ],
+      "image": "data/frame-63.jpg"
+    },
+    {
+      "frame": 74,
+      "media_ms": 2466.67,
+      "tracks": [
+        {
+          "id": 1,
+          "revision": 2,
+          "label": "cup",
+          "confidence": 0.793537,
+          "visible": true,
+          "box": [
+            0.353333,
+            0.03,
+            0.418333,
+            0.73
+          ]
+        },
+        {
+          "id": 2,
+          "revision": 3,
+          "label": "dining table",
+          "confidence": 0.439937,
+          "visible": true,
+          "box": [
+            0.0766667,
+            0.01,
+            0.916667,
+            0.975
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 7,
+          "label": "spoon",
+          "confidence": 0.635011,
+          "visible": true,
+          "box": [
+            0.618333,
+            0.265,
+            0.146667,
+            0.5475
+          ]
+        }
+      ],
+      "image": "data/frame-74.jpg"
+    },
+    {
+      "frame": 83,
+      "media_ms": 2766.67,
+      "tracks": [
+        {
+          "id": 1,
+          "revision": 2,
+          "label": "cup",
+          "confidence": 0.807727,
+          "visible": true,
+          "box": [
+            0.405,
+            0.0275,
+            0.418333,
+            0.75
+          ]
+        },
+        {
+          "id": 2,
+          "revision": 5,
+          "label": "dining table",
+          "confidence": 0.436701,
+          "visible": true,
+          "box": [
+            0.128333,
+            0.0025,
+            0.85,
+            0.98
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 8,
+          "label": "spoon",
+          "confidence": 0.592122,
+          "visible": true,
+          "box": [
+            0.668333,
+            0.26,
+            0.148333,
+            0.55
+          ]
+        }
+      ],
+      "image": "data/frame-83.jpg"
+    },
+    {
+      "frame": 94,
+      "media_ms": 3133.33,
+      "tracks": [
+        {
+          "id": 1,
+          "revision": 3,
+          "label": "cup",
+          "confidence": 0.801134,
+          "visible": false,
+          "box": [
+            0.431667,
+            0.025,
+            0.423333,
+            0.73
+          ]
+        },
+        {
+          "id": 2,
+          "revision": 6,
+          "label": "dining table",
+          "confidence": 0.536325,
+          "visible": false,
+          "box": [
+            0.151667,
+            0,
+            0.825,
+            0.9875
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 10,
+          "label": "spoon",
+          "confidence": 0.600903,
+          "visible": false,
+          "box": [
+            0.695,
+            0.25,
+            0.148333,
+            0.565
+          ]
+        }
+      ],
+      "image": "data/frame-94.jpg"
+    },
+    {
+      "frame": 105,
+      "media_ms": 3500,
+      "tracks": [
+        {
+          "id": 1,
+          "revision": 3,
+          "label": "cup",
+          "confidence": 0.801134,
+          "visible": false,
+          "box": [
+            0.431667,
+            0.025,
+            0.423333,
+            0.73
+          ]
+        },
+        {
+          "id": 2,
+          "revision": 6,
+          "label": "dining table",
+          "confidence": 0.536325,
+          "visible": false,
+          "box": [
+            0.151667,
+            0,
+            0.825,
+            0.9875
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 10,
+          "label": "spoon",
+          "confidence": 0.600903,
+          "visible": false,
+          "box": [
+            0.695,
+            0.25,
+            0.148333,
+            0.565
+          ]
+        }
+      ],
+      "image": "data/frame-105.jpg"
+    },
+    {
+      "frame": 116,
+      "media_ms": 3866.67,
+      "tracks": [
+        {
+          "id": 1,
+          "revision": 3,
+          "label": "cup",
+          "confidence": 0.801134,
+          "visible": false,
+          "box": [
+            0.431667,
+            0.025,
+            0.423333,
+            0.73
+          ]
+        },
+        {
+          "id": 2,
+          "revision": 6,
+          "label": "dining table",
+          "confidence": 0.536325,
+          "visible": false,
+          "box": [
+            0.151667,
+            0,
+            0.825,
+            0.9875
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 10,
+          "label": "spoon",
+          "confidence": 0.600903,
+          "visible": false,
+          "box": [
+            0.695,
+            0.25,
+            0.148333,
+            0.565
+          ]
+        }
+      ],
+      "image": "data/frame-116.jpg"
+    },
+    {
+      "frame": 125,
+      "media_ms": 4166.67,
+      "tracks": [
+        {
+          "id": 1,
+          "revision": 3,
+          "label": "cup",
+          "confidence": 0.801134,
+          "visible": false,
+          "box": [
+            0.431667,
+            0.025,
+            0.423333,
+            0.73
+          ]
+        },
+        {
+          "id": 2,
+          "revision": 7,
+          "label": "dining table",
+          "confidence": 0.842995,
+          "visible": true,
+          "box": [
+            0.498333,
+            0.245,
+            0.496667,
+            0.5125
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 11,
+          "label": "spoon",
+          "confidence": 0.701932,
+          "visible": true,
+          "box": [
+            0.765,
+            0.3625,
+            0.0866667,
+            0.2925
+          ]
+        },
+        {
+          "id": 4,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.919291,
+          "visible": true,
+          "box": [
+            0.14,
+            0.27,
+            0.206667,
+            0.32
+          ]
+        },
+        {
+          "id": 5,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.91906,
+          "visible": true,
+          "box": [
+            0.641667,
+            0.27,
+            0.205,
+            0.325
+          ]
+        },
+        {
+          "id": 6,
+          "revision": 1,
+          "label": "dining table",
+          "confidence": 0.878193,
+          "visible": true,
+          "box": [
+            0.00833333,
+            0.24,
+            0.493333,
+            0.5175
+          ]
+        },
+        {
+          "id": 7,
+          "revision": 1,
+          "label": "spoon",
+          "confidence": 0.61366,
+          "visible": true,
+          "box": [
+            0.263333,
+            0.365,
+            0.09,
+            0.2925
+          ]
+        }
+      ],
+      "image": "data/frame-125.jpg"
+    },
+    {
+      "frame": 135,
+      "media_ms": 4500,
+      "tracks": [
+        {
+          "id": 2,
+          "revision": 7,
+          "label": "dining table",
+          "confidence": 0.842995,
+          "visible": true,
+          "box": [
+            0.498333,
+            0.245,
+            0.496667,
+            0.5125
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 11,
+          "label": "spoon",
+          "confidence": 0.701932,
+          "visible": true,
+          "box": [
+            0.765,
+            0.3625,
+            0.0866667,
+            0.2925
+          ]
+        },
+        {
+          "id": 4,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.919291,
+          "visible": true,
+          "box": [
+            0.14,
+            0.27,
+            0.206667,
+            0.32
+          ]
+        },
+        {
+          "id": 5,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.91906,
+          "visible": true,
+          "box": [
+            0.641667,
+            0.27,
+            0.205,
+            0.325
+          ]
+        },
+        {
+          "id": 6,
+          "revision": 1,
+          "label": "dining table",
+          "confidence": 0.878193,
+          "visible": true,
+          "box": [
+            0.00833333,
+            0.24,
+            0.493333,
+            0.5175
+          ]
+        },
+        {
+          "id": 7,
+          "revision": 1,
+          "label": "spoon",
+          "confidence": 0.61366,
+          "visible": true,
+          "box": [
+            0.263333,
+            0.365,
+            0.09,
+            0.2925
+          ]
+        }
+      ],
+      "image": "data/frame-135.jpg"
+    },
+    {
+      "frame": 147,
+      "media_ms": 4900,
+      "tracks": [
+        {
+          "id": 2,
+          "revision": 7,
+          "label": "dining table",
+          "confidence": 0.842995,
+          "visible": true,
+          "box": [
+            0.498333,
+            0.245,
+            0.496667,
+            0.5125
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 11,
+          "label": "spoon",
+          "confidence": 0.701932,
+          "visible": true,
+          "box": [
+            0.765,
+            0.3625,
+            0.0866667,
+            0.2925
+          ]
+        },
+        {
+          "id": 4,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.919291,
+          "visible": true,
+          "box": [
+            0.14,
+            0.27,
+            0.206667,
+            0.32
+          ]
+        },
+        {
+          "id": 5,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.91906,
+          "visible": true,
+          "box": [
+            0.641667,
+            0.27,
+            0.205,
+            0.325
+          ]
+        },
+        {
+          "id": 6,
+          "revision": 1,
+          "label": "dining table",
+          "confidence": 0.878193,
+          "visible": true,
+          "box": [
+            0.00833333,
+            0.24,
+            0.493333,
+            0.5175
+          ]
+        },
+        {
+          "id": 7,
+          "revision": 1,
+          "label": "spoon",
+          "confidence": 0.61366,
+          "visible": true,
+          "box": [
+            0.263333,
+            0.365,
+            0.09,
+            0.2925
+          ]
+        }
+      ],
+      "image": "data/frame-147.jpg"
+    },
+    {
+      "frame": 158,
+      "media_ms": 5266.67,
+      "tracks": [
+        {
+          "id": 2,
+          "revision": 7,
+          "label": "dining table",
+          "confidence": 0.842995,
+          "visible": true,
+          "box": [
+            0.498333,
+            0.245,
+            0.496667,
+            0.5125
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 11,
+          "label": "spoon",
+          "confidence": 0.701932,
+          "visible": true,
+          "box": [
+            0.765,
+            0.3625,
+            0.0866667,
+            0.2925
+          ]
+        },
+        {
+          "id": 4,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.919291,
+          "visible": true,
+          "box": [
+            0.14,
+            0.27,
+            0.206667,
+            0.32
+          ]
+        },
+        {
+          "id": 5,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.91906,
+          "visible": true,
+          "box": [
+            0.641667,
+            0.27,
+            0.205,
+            0.325
+          ]
+        },
+        {
+          "id": 6,
+          "revision": 1,
+          "label": "dining table",
+          "confidence": 0.878193,
+          "visible": true,
+          "box": [
+            0.00833333,
+            0.24,
+            0.493333,
+            0.5175
+          ]
+        },
+        {
+          "id": 7,
+          "revision": 1,
+          "label": "spoon",
+          "confidence": 0.61366,
+          "visible": true,
+          "box": [
+            0.263333,
+            0.365,
+            0.09,
+            0.2925
+          ]
+        }
+      ],
+      "image": "data/frame-158.jpg"
+    },
+    {
+      "frame": 168,
+      "media_ms": 5600,
+      "tracks": [
+        {
+          "id": 2,
+          "revision": 7,
+          "label": "dining table",
+          "confidence": 0.842995,
+          "visible": true,
+          "box": [
+            0.498333,
+            0.245,
+            0.496667,
+            0.5125
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 11,
+          "label": "spoon",
+          "confidence": 0.701932,
+          "visible": true,
+          "box": [
+            0.765,
+            0.3625,
+            0.0866667,
+            0.2925
+          ]
+        },
+        {
+          "id": 4,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.919291,
+          "visible": true,
+          "box": [
+            0.14,
+            0.27,
+            0.206667,
+            0.32
+          ]
+        },
+        {
+          "id": 5,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.91906,
+          "visible": true,
+          "box": [
+            0.641667,
+            0.27,
+            0.205,
+            0.325
+          ]
+        },
+        {
+          "id": 6,
+          "revision": 1,
+          "label": "dining table",
+          "confidence": 0.878193,
+          "visible": true,
+          "box": [
+            0.00833333,
+            0.24,
+            0.493333,
+            0.5175
+          ]
+        },
+        {
+          "id": 7,
+          "revision": 1,
+          "label": "spoon",
+          "confidence": 0.61366,
+          "visible": true,
+          "box": [
+            0.263333,
+            0.365,
+            0.09,
+            0.2925
+          ]
+        }
+      ],
+      "image": "data/frame-168.jpg"
+    },
+    {
+      "frame": 179,
+      "media_ms": 5966.67,
+      "tracks": [
+        {
+          "id": 2,
+          "revision": 7,
+          "label": "dining table",
+          "confidence": 0.842995,
+          "visible": true,
+          "box": [
+            0.498333,
+            0.245,
+            0.496667,
+            0.5125
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 11,
+          "label": "spoon",
+          "confidence": 0.701932,
+          "visible": true,
+          "box": [
+            0.765,
+            0.3625,
+            0.0866667,
+            0.2925
+          ]
+        },
+        {
+          "id": 4,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.919291,
+          "visible": true,
+          "box": [
+            0.14,
+            0.27,
+            0.206667,
+            0.32
+          ]
+        },
+        {
+          "id": 5,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.91906,
+          "visible": true,
+          "box": [
+            0.641667,
+            0.27,
+            0.205,
+            0.325
+          ]
+        },
+        {
+          "id": 6,
+          "revision": 1,
+          "label": "dining table",
+          "confidence": 0.878193,
+          "visible": true,
+          "box": [
+            0.00833333,
+            0.24,
+            0.493333,
+            0.5175
+          ]
+        },
+        {
+          "id": 7,
+          "revision": 1,
+          "label": "spoon",
+          "confidence": 0.61366,
+          "visible": true,
+          "box": [
+            0.263333,
+            0.365,
+            0.09,
+            0.2925
+          ]
+        }
+      ],
+      "image": "data/frame-179.jpg"
+    },
+    {
+      "frame": 188,
+      "media_ms": 6266.67,
+      "tracks": [
+        {
+          "id": 2,
+          "revision": 8,
+          "label": "dining table",
+          "confidence": 0.534806,
+          "visible": true,
+          "box": [
+            0.0216667,
+            0.0075,
+            0.963333,
+            0.9725
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 12,
+          "label": "spoon",
+          "confidence": 0.701932,
+          "visible": false,
+          "box": [
+            0.765,
+            0.3625,
+            0.0866667,
+            0.2925
+          ]
+        },
+        {
+          "id": 4,
+          "revision": 2,
+          "label": "cup",
+          "confidence": 0.919291,
+          "visible": false,
+          "box": [
+            0.14,
+            0.27,
+            0.206667,
+            0.32
+          ]
+        },
+        {
+          "id": 5,
+          "revision": 2,
+          "label": "cup",
+          "confidence": 0.91906,
+          "visible": false,
+          "box": [
+            0.641667,
+            0.27,
+            0.205,
+            0.325
+          ]
+        },
+        {
+          "id": 6,
+          "revision": 2,
+          "label": "dining table",
+          "confidence": 0.878193,
+          "visible": false,
+          "box": [
+            0.00833333,
+            0.24,
+            0.493333,
+            0.5175
+          ]
+        },
+        {
+          "id": 7,
+          "revision": 2,
+          "label": "spoon",
+          "confidence": 0.61366,
+          "visible": false,
+          "box": [
+            0.263333,
+            0.365,
+            0.09,
+            0.2925
+          ]
+        },
+        {
+          "id": 8,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.826241,
+          "visible": true,
+          "box": [
+            0.275,
+            0.035,
+            0.426667,
+            0.7225
+          ]
+        },
+        {
+          "id": 9,
+          "revision": 1,
+          "label": "spoon",
+          "confidence": 0.427287,
+          "visible": true,
+          "box": [
+            0.538333,
+            0.3175,
+            0.148333,
+            0.49
+          ]
+        }
+      ],
+      "image": "data/frame-188.jpg"
+    },
+    {
+      "frame": 200,
+      "media_ms": 6666.67,
+      "tracks": [
+        {
+          "id": 2,
+          "revision": 8,
+          "label": "dining table",
+          "confidence": 0.534806,
+          "visible": true,
+          "box": [
+            0.0216667,
+            0.0075,
+            0.963333,
+            0.9725
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 12,
+          "label": "spoon",
+          "confidence": 0.701932,
+          "visible": false,
+          "box": [
+            0.765,
+            0.3625,
+            0.0866667,
+            0.2925
+          ]
+        },
+        {
+          "id": 4,
+          "revision": 2,
+          "label": "cup",
+          "confidence": 0.919291,
+          "visible": false,
+          "box": [
+            0.14,
+            0.27,
+            0.206667,
+            0.32
+          ]
+        },
+        {
+          "id": 5,
+          "revision": 2,
+          "label": "cup",
+          "confidence": 0.91906,
+          "visible": false,
+          "box": [
+            0.641667,
+            0.27,
+            0.205,
+            0.325
+          ]
+        },
+        {
+          "id": 6,
+          "revision": 2,
+          "label": "dining table",
+          "confidence": 0.878193,
+          "visible": false,
+          "box": [
+            0.00833333,
+            0.24,
+            0.493333,
+            0.5175
+          ]
+        },
+        {
+          "id": 7,
+          "revision": 2,
+          "label": "spoon",
+          "confidence": 0.61366,
+          "visible": false,
+          "box": [
+            0.263333,
+            0.365,
+            0.09,
+            0.2925
+          ]
+        },
+        {
+          "id": 8,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.826241,
+          "visible": true,
+          "box": [
+            0.275,
+            0.035,
+            0.426667,
+            0.7225
+          ]
+        },
+        {
+          "id": 9,
+          "revision": 1,
+          "label": "spoon",
+          "confidence": 0.427287,
+          "visible": true,
+          "box": [
+            0.538333,
+            0.3175,
+            0.148333,
+            0.49
+          ]
+        }
+      ],
+      "image": "data/frame-200.jpg"
+    },
+    {
+      "frame": 211,
+      "media_ms": 7033.33,
+      "tracks": [
+        {
+          "id": 2,
+          "revision": 8,
+          "label": "dining table",
+          "confidence": 0.534806,
+          "visible": true,
+          "box": [
+            0.0216667,
+            0.0075,
+            0.963333,
+            0.9725
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 12,
+          "label": "spoon",
+          "confidence": 0.701932,
+          "visible": false,
+          "box": [
+            0.765,
+            0.3625,
+            0.0866667,
+            0.2925
+          ]
+        },
+        {
+          "id": 4,
+          "revision": 2,
+          "label": "cup",
+          "confidence": 0.919291,
+          "visible": false,
+          "box": [
+            0.14,
+            0.27,
+            0.206667,
+            0.32
+          ]
+        },
+        {
+          "id": 5,
+          "revision": 2,
+          "label": "cup",
+          "confidence": 0.91906,
+          "visible": false,
+          "box": [
+            0.641667,
+            0.27,
+            0.205,
+            0.325
+          ]
+        },
+        {
+          "id": 6,
+          "revision": 2,
+          "label": "dining table",
+          "confidence": 0.878193,
+          "visible": false,
+          "box": [
+            0.00833333,
+            0.24,
+            0.493333,
+            0.5175
+          ]
+        },
+        {
+          "id": 7,
+          "revision": 2,
+          "label": "spoon",
+          "confidence": 0.61366,
+          "visible": false,
+          "box": [
+            0.263333,
+            0.365,
+            0.09,
+            0.2925
+          ]
+        },
+        {
+          "id": 8,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.826241,
+          "visible": true,
+          "box": [
+            0.275,
+            0.035,
+            0.426667,
+            0.7225
+          ]
+        },
+        {
+          "id": 9,
+          "revision": 1,
+          "label": "spoon",
+          "confidence": 0.427287,
+          "visible": true,
+          "box": [
+            0.538333,
+            0.3175,
+            0.148333,
+            0.49
+          ]
+        }
+      ],
+      "image": "data/frame-211.jpg"
+    },
+    {
+      "frame": 219,
+      "media_ms": 7300,
+      "tracks": [
+        {
+          "id": 2,
+          "revision": 8,
+          "label": "dining table",
+          "confidence": 0.534806,
+          "visible": true,
+          "box": [
+            0.0216667,
+            0.0075,
+            0.963333,
+            0.9725
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 12,
+          "label": "spoon",
+          "confidence": 0.701932,
+          "visible": false,
+          "box": [
+            0.765,
+            0.3625,
+            0.0866667,
+            0.2925
+          ]
+        },
+        {
+          "id": 4,
+          "revision": 2,
+          "label": "cup",
+          "confidence": 0.919291,
+          "visible": false,
+          "box": [
+            0.14,
+            0.27,
+            0.206667,
+            0.32
+          ]
+        },
+        {
+          "id": 5,
+          "revision": 2,
+          "label": "cup",
+          "confidence": 0.91906,
+          "visible": false,
+          "box": [
+            0.641667,
+            0.27,
+            0.205,
+            0.325
+          ]
+        },
+        {
+          "id": 6,
+          "revision": 2,
+          "label": "dining table",
+          "confidence": 0.878193,
+          "visible": false,
+          "box": [
+            0.00833333,
+            0.24,
+            0.493333,
+            0.5175
+          ]
+        },
+        {
+          "id": 7,
+          "revision": 2,
+          "label": "spoon",
+          "confidence": 0.61366,
+          "visible": false,
+          "box": [
+            0.263333,
+            0.365,
+            0.09,
+            0.2925
+          ]
+        },
+        {
+          "id": 8,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.826241,
+          "visible": true,
+          "box": [
+            0.275,
+            0.035,
+            0.426667,
+            0.7225
+          ]
+        },
+        {
+          "id": 9,
+          "revision": 1,
+          "label": "spoon",
+          "confidence": 0.427287,
+          "visible": true,
+          "box": [
+            0.538333,
+            0.3175,
+            0.148333,
+            0.49
+          ]
+        }
+      ],
+      "image": "data/frame-219.jpg"
+    },
+    {
+      "frame": 230,
+      "media_ms": 7666.67,
+      "tracks": [
+        {
+          "id": 2,
+          "revision": 8,
+          "label": "dining table",
+          "confidence": 0.534806,
+          "visible": true,
+          "box": [
+            0.0216667,
+            0.0075,
+            0.963333,
+            0.9725
+          ]
+        },
+        {
+          "id": 8,
+          "revision": 1,
+          "label": "cup",
+          "confidence": 0.826241,
+          "visible": true,
+          "box": [
+            0.275,
+            0.035,
+            0.426667,
+            0.7225
+          ]
+        },
+        {
+          "id": 9,
+          "revision": 1,
+          "label": "spoon",
+          "confidence": 0.427287,
+          "visible": true,
+          "box": [
+            0.538333,
+            0.3175,
+            0.148333,
+            0.49
+          ]
+        }
+      ],
+      "image": "data/frame-230.jpg"
+    }
+  ],
+  "responses": [
+    {
+      "turn": 1,
+      "query": "cup",
+      "evidence_ms": 100,
+      "finished_ms": 727.884,
+      "historical": false,
+      "status": "published",
+      "reason": "current_evidence",
+      "text": "The selected object is a cup."
+    },
+    {
+      "turn": 2,
+      "query": "cup",
+      "evidence_ms": 2700,
+      "finished_ms": 3295.51,
+      "historical": false,
+      "status": "suppressed",
+      "reason": "target_unobserved",
+      "text": ""
+    },
+    {
+      "turn": 3,
+      "query": "previous cup",
+      "evidence_ms": 2933.33,
+      "finished_ms": 4110.57,
+      "historical": true,
+      "status": "published",
+      "reason": "historical_evidence",
+      "text": "In the retained observation at 2933 ms, I observed a cup."
+    },
+    {
+      "turn": 4,
+      "query": "cup",
+      "evidence_ms": 0,
+      "finished_ms": 5333.96,
+      "historical": false,
+      "status": "clarify",
+      "reason": "ambiguous_reference",
+      "text": "Please specify a visible object or a less ambiguous reference."
+    },
+    {
+      "turn": 5,
+      "query": "left cup",
+      "evidence_ms": 6200,
+      "finished_ms": 6562.48,
+      "historical": false,
+      "status": "suppressed",
+      "reason": "superseded_turn",
+      "text": ""
+    },
+    {
+      "turn": 6,
+      "query": "right cup",
+      "evidence_ms": 6366.67,
+      "finished_ms": 6970.46,
+      "historical": false,
+      "status": "published",
+      "reason": "current_evidence",
+      "text": "The selected object is a cup."
+    }
+  ],
+  "summary": {
+    "version": "0.1.0",
+    "opencv": "4.12.0",
+    "model": "YOLOX-s FP32 / OpenCV CPU",
+    "policy": "latest",
+    "capacity": 4,
+    "source_fps": 30,
+    "paced": true,
+    "threads": 2,
+    "produced": 240,
+    "processed": 113,
+    "dropped": 127,
+    "queue_high_water": 4,
+    "warmup_ms": 122.009,
+    "peak_rss_mb": 344.625,
+    "wall_ms": 8319.66,
+    "response_delay_ms": 400,
+    "published": 3,
+    "suppressed": 2,
+    "clarified": 1,
+    "dropped_queries": 0
+  }
+}

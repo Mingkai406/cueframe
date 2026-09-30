@@ -1,0 +1,29 @@
+{
+  "latest": {
+    "n_processed": 331,
+    "latency_p50_ms": 191.337,
+    "latency_p95_ms": 209.091,
+    "inference_p50_ms": 73.6029,
+    "queue_p50_ms": 117.361
+  },
+  "fifo": {
+    "n_processed": 334,
+    "latency_p50_ms": 352.7255,
+    "latency_p95_ms": 373.59049999999996,
+    "inference_p50_ms": 72.97605,
+    "queue_p50_ms": 279.718
+  },
+  "environment": {
+    "cpu": "Apple M4 Pro",
+    "architecture": "arm64",
+    "opencv": "4.12.0",
+    "model": "YOLOX-s FP32",
+    "threads": 2,
+    "source_fps": 30,
+    "queue_capacity": 4,
+    "runs_per_policy": 3,
+    "input_frames_per_run": 240,
+    "workload": "controlled transformations of a CC0 photograph",
+    "date": "2026-09-29"
+  }
+}

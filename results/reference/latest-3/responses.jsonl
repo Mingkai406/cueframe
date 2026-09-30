@@ -1,0 +1,6 @@
+{"turn":1,"query":"cup","evidence_ms":133.333,"finished_ms":718.511,"historical":false,"status":"published","reason":"current_evidence","text":"The selected object is a cup."}
+{"turn":2,"query":"cup","evidence_ms":2700,"finished_ms":3299.83,"historical":false,"status":"suppressed","reason":"target_unobserved","text":""}
+{"turn":3,"query":"previous cup","evidence_ms":2933.33,"finished_ms":4134.54,"historical":true,"status":"published","reason":"historical_evidence","text":"In the retained observation at 2933 ms, I observed a cup."}
+{"turn":4,"query":"cup","evidence_ms":0,"finished_ms":5401.61,"historical":false,"status":"clarify","reason":"ambiguous_reference","text":"Please specify a visible object or a less ambiguous reference."}
+{"turn":5,"query":"left cup","evidence_ms":6200,"finished_ms":6544.18,"historical":false,"status":"suppressed","reason":"superseded_turn","text":""}
+{"turn":6,"query":"right cup","evidence_ms":6333.33,"finished_ms":6951.51,"historical":false,"status":"published","reason":"current_evidence","text":"The selected object is a cup."}

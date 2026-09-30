@@ -1,0 +1,12 @@
+{
+  "system": "Darwin",
+  "release": "25.4.0",
+  "machine": "arm64",
+  "processor": "arm",
+  "repeats": 3,
+  "workload": "8 s transformed CC0 photograph at 30 fps; not a human-interaction dataset",
+  "comparison": "same model, same frame input, 2 CPU threads, queue capacity 4; latest evicts oldest; FIFO rejects newest",
+  "response_worker": "template renderer with injected 400 ms delay, not LLM inference",
+  "cpu": "Apple M4 Pro",
+  "date": "2026-09-29"
+}

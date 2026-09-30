@@ -1,0 +1,19 @@
+CueFrame
+Copyright (c) 2026 Mingkai Gao
+
+CueFrame source is licensed under MIT. External components retain their own licenses.
+
+OpenCV 4.12.0: Apache-2.0; https://github.com/opencv/opencv
+YOLOX / OpenCV Zoo model and decoding reference: Apache-2.0.
+https://github.com/opencv/opencv_zoo/tree/47534e27c9851bb1128ccc0102f1145e27f23f98/models/object_detection_yolox
+The detector's preprocessing and anchor decoding follow this public model contract.
+Model license is included at models/LICENSE-YOLOX. Model weights are downloaded separately.
+
+Coffee photograph: Rachel Michetti, CC0, courtesy of Pikolo Espresso Bar;
+distributed via scikit-image. See examples/README.md.
+
+Figure design references: the ggplot2 extensions gallery, especially ggdist's
+emphasis on distributions and ggforce's annotated multi-panel compositions.
+https://exts.ggplot2.tidyverse.org/gallery/
+Plots are original Matplotlib renderings of CueFrame traces; no gallery artwork
+or plotting package code is copied. No AI-generated illustrations are used.
