@@ -1649,5 +1649,53 @@
     "suppressed": 2,
     "clarified": 1,
     "dropped_queries": 0
-  }
+  },
+  "retained_observations": [
+    {
+      "frame": 88,
+      "media_ms": 2933.33,
+      "tracks": [
+        {
+          "id": 1,
+          "revision": 2,
+          "label": "cup",
+          "confidence": 0.801134,
+          "visible": true,
+          "box": [
+            0.431667,
+            0.025,
+            0.423333,
+            0.73
+          ]
+        },
+        {
+          "id": 2,
+          "revision": 5,
+          "label": "dining table",
+          "confidence": 0.536325,
+          "visible": true,
+          "box": [
+            0.151667,
+            0,
+            0.825,
+            0.9875
+          ]
+        },
+        {
+          "id": 3,
+          "revision": 9,
+          "label": "spoon",
+          "confidence": 0.600903,
+          "visible": true,
+          "box": [
+            0.695,
+            0.25,
+            0.148333,
+            0.565
+          ]
+        }
+      ],
+      "image": "data/evidence-88.jpg"
+    }
+  ]
 }

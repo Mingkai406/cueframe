@@ -1,6 +1,5 @@
-<div align="center">
-<img src="docs/assets/mark.svg" width="52" alt="CueFrame mark">
-<h1>CueFrame</h1>
+<div align="left">
+<h1><picture><source media="(prefers-color-scheme: dark)" srcset="docs/assets/wordmark-light.svg"><img src="docs/assets/wordmark-ink.svg" width="290" alt="CueFrame"></picture></h1>
 <p><strong>Visual evidence for real-time human–AI interaction.</strong></p>
 <p>A C++ runtime that connects current observations and retained history to a response — and checks whether that response still belongs.</p>
 <p><a href="https://mingkai406.github.io/cueframe/">Interactive project page</a> · <a href="#quick-start">Run locally</a> · <a href="docs/architecture.md">Architecture</a></p>

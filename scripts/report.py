@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Publish auditable trace excerpts and figures; every plotted value comes from a run."""
 
-import argparse, csv, json, shutil
+import argparse
+import csv
+import json
+import shutil
 from pathlib import Path
 import numpy as np
 import matplotlib
@@ -85,9 +88,12 @@ metrics["environment"] = {
 (data / "metrics.json").write_text(json.dumps(metrics, indent=2))
 # Select observations from one actual run for a browsable time-synchronized trace.
 folder = runs / "latest-1"
-obs = [json.loads(l) for l in (folder / "observations.jsonl").read_text().splitlines()]
+obs = [
+    json.loads(line)
+    for line in (folder / "observations.jsonl").read_text().splitlines()
+]
 responses = [
-    json.loads(l) for l in (folder / "responses.jsonl").read_text().splitlines()
+    json.loads(line) for line in (folder / "responses.jsonl").read_text().splitlines()
 ]
 selected = []
 for t in np.arange(0, 8000, 350):
@@ -99,10 +105,26 @@ for t in np.arange(0, 8000, 350):
     o = dict(o)
     o["image"] = "data/" + dst
     selected.append(o)
+# Preserve the exact evidence frame used by a historical response.
+retained = []
+for response in responses:
+    if not response["historical"]:
+        continue
+    original = min(
+        obs, key=lambda item: abs(item["media_ms"] - response["evidence_ms"])
+    )
+    if abs(original["media_ms"] - response["evidence_ms"]) > 0.01:
+        raise ValueError("Historical response has no matching observation")
+    evidence = dict(original)
+    destination = f"evidence-{evidence['frame']}.jpg"
+    shutil.copyfile(folder / "frames" / f"{evidence['frame']}.jpg", data / destination)
+    evidence["image"] = "data/" + destination
+    retained.append(evidence)
 (data / "trace.json").write_text(
     json.dumps(
         {
             "observations": selected,
+            "retained_observations": retained,
             "responses": responses,
             "summary": json.loads((folder / "summary.json").read_text()),
         },

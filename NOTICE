@@ -17,3 +17,8 @@ emphasis on distributions and ggforce's annotated multi-panel compositions.
 https://exts.ggplot2.tidyverse.org/gallery/
 Plots are original Matplotlib renderings of CueFrame traces; no gallery artwork
 or plotting package code is copied. No AI-generated illustrations are used.
+
+Brand typography: Instrument Sans by Rodrigo Fuenzalida, directed by Jordan Egstad.
+https://github.com/Instrument/instrument-sans
+SIL Open Font License 1.1; see docs/assets/fonts/OFL-InstrumentSans.txt.
+CueFrame wordmark uses outlined glyphs; the project page self-hosts a Latin font subset.

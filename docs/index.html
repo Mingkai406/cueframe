@@ -5,80 +5,115 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="CueFrame: a C++ runtime for real-time visual evidence, temporal references, and cancellation-aware responses."
+      content="CueFrame is a C++ runtime for visual evidence, temporal references, and cancellation-aware responses. Explore a recorded run and reproducible measurements."
     />
-    <title>CueFrame — Visual evidence for interaction</title>
+    <title>CueFrame · Visual evidence runtime</title>
     <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/instrument-sans-latin.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="nav">
-      <a class="brand" href="#"
+    <a class="skip" href="#main">Skip to content</a>
+    <header
+      class="masthead"
+      data-role="nav"
+      data-height-px="80"
+      data-single-line="true"
+    >
+      <a class="brand" href="#" aria-label="CueFrame home"
         ><img
-          src="assets/mark.svg"
-          alt=""
-          width="28"
-          height="28"
-        />CueFrame<span>v0.1</span></a
-      >
+          src="assets/wordmark-ink.svg"
+          width="160"
+          height="33"
+          alt="CueFrame"
+      /></a>
       <nav aria-label="Main navigation">
-        <a href="#replay">Replay</a><a href="#measurements">Measurements</a
-        ><a href="#design">Design</a
-        ><a href="https://github.com/Mingkai406/cueframe">GitHub ↗</a>
+        <a href="#replay">Demo</a><a href="#measurements">Measurements</a
+        ><a href="https://github.com/Mingkai406/cueframe" class="repo-link"
+          >GitHub <span aria-hidden="true">↗</span></a
+        >
       </nav>
     </header>
-    <main>
-      <section class="hero">
-        <div class="eyebrow">SYSTEMS FOR VISUAL INTERACTION</div>
-        <h1>Follow the scene.<br /><span>Keep the context.</span></h1>
-        <div class="hero-bottom">
+    <main id="main">
+      <section class="introduction" data-layout="split">
+        <div>
+          <p class="project-kind">An open-source C++ runtime</p>
+          <h1>Visual context for<br />real-time interaction.</h1>
+        </div>
+        <div class="intro-copy">
           <p>
-            CueFrame connects visual observations to the references people make.
-            A C++ runtime that preserves useful history and checks whether a
-            pending answer still belongs to the conversation.
+            Track what is visible, retain earlier observations, and check the
+            evidence before a response is published.
           </p>
-          <a class="button" href="#replay"
-            >Explore an actual run <span>↓</span></a
-          >
-        </div>
-        <div class="spec">
-          <span>C++20 / OpenCV / ONNX</span><span>Local inference</span
-          ><span>Open source · MIT</span>
-        </div>
-      </section>
-      <section class="opening-figure">
-        <img
-          src="assets/overview.svg"
-          alt="Three actual detector frames: a single cup, a current blank frame paired with timestamped retained evidence, and two cups requiring clarification."
-          width="1350"
-          height="580"
-        />
-      </section>
-      <section id="replay" class="section">
-        <div class="section-head">
-          <span class="section-no">01</span>
-          <div>
-            <h2>Every answer has a when.</h2>
-            <p>
-              Scrub the recorded trace. Observe how the evidence changes before
-              the response arrives.
-            </p>
+          <div class="intro-links">
+            <a href="https://github.com/Mingkai406/cueframe#quick-start"
+              >Run locally <span aria-hidden="true">↗</span></a
+            ><a
+              href="https://github.com/Mingkai406/cueframe/blob/main/docs/architecture.md"
+              >Read the architecture <span aria-hidden="true">↗</span></a
+            >
           </div>
-          <span class="tag">ACTUAL RUN / latest-1</span>
+          <p class="stack">
+            C++20 <span>·</span> OpenCV <span>·</span> ONNX <span>·</span> CPU
+            inference
+          </p>
         </div>
-        <div class="replay">
-          <div class="view">
-            <div class="view-top">
-              <span>DETECTOR VIEW</span
-              ><span id="frame-label">Loading trace…</span>
+      </section>
+
+      <section
+        id="replay"
+        class="demo"
+        data-layout="viewer"
+        aria-labelledby="demo-title"
+      >
+        <div class="section-bar">
+          <h2 id="demo-title">Inside a recorded run</h2>
+          <span class="run-label">latest-1 / 8 seconds</span>
+        </div>
+        <div class="scenario-bar" role="group" aria-label="Jump to a scene">
+          <span>Inspect a moment</span>
+          <button type="button" data-seek="900" aria-pressed="true">
+            Object visible
+          </button>
+          <button type="button" data-seek="4120" aria-pressed="false">
+            Remember an object
+          </button>
+          <button type="button" data-seek="5500" aria-pressed="false">
+            Resolve ambiguity
+          </button>
+        </div>
+        <div class="viewer">
+          <div class="viewport">
+            <div class="view-heading">
+              <span>Camera evidence</span
+              ><span id="frame-label">Loading recorded trace</span>
             </div>
-            <img
-              id="scene"
-              src="data/frame-0.jpg"
-              alt="Detector output for the selected source frame"
-            />
+            <div class="scene-wrap">
+              <img
+                id="scene"
+                src="data/frame-0.jpg"
+                width="600"
+                height="400"
+                alt="Recorded object detection output"
+              />
+              <div id="empty-scene" class="empty-scene" hidden>
+                <span>Current view</span><strong>No objects detected</strong>
+                <p>Earlier observations remain in memory.</p>
+              </div>
+            </div>
             <div class="transport">
-              <button id="play" type="button" aria-label="Play recorded trace">
+              <button
+                id="play"
+                type="button"
+                aria-label="Play recorded trace"
+                disabled
+              >
                 Play</button
               ><input
                 id="scrubber"
@@ -86,146 +121,213 @@
                 min="0"
                 max="8000"
                 step="10"
-                value="0"
+                value="900"
                 aria-label="Replay time"
-              /><output id="time">0.00 s</output>
+                disabled
+              /><output id="time">0.90 s</output>
             </div>
           </div>
-          <div class="evidence">
-            <div class="view-top">
-              <span>OBSERVED OBJECTS</span><span>AT THIS FRAME</span>
+          <aside class="inspector" aria-label="Evidence inspector">
+            <div class="inspector-title">
+              <h3>Evidence inspector</h3>
+              <span id="object-count">Loading</span>
             </div>
             <div id="tracks" class="tracks"></div>
-            <div class="history-note">
-              <span class="small-label">TEMPORAL CONTRACT</span>
-              <p>
-                “Previous cup” can refer to retained evidence, even when the
-                current frame is blank. A new query supersedes an older pending
-                turn.
-              </p>
+            <div class="retained" id="retained" hidden>
+              <div class="retained-title">
+                <span>Retained observation</span
+                ><span id="retained-time"></span>
+              </div>
+              <img
+                id="retained-image"
+                width="600"
+                height="400"
+                alt="Earlier recorded observation retained as evidence"
+              />
             </div>
-          </div>
+            <div class="decision">
+              <span class="label">Latest response</span>
+              <div id="decision-status" class="decision-status">Waiting</div>
+              <p id="decision-text">Select a moment to inspect the response.</p>
+              <small id="decision-detail"></small>
+            </div>
+          </aside>
+        </div>
+        <div class="event-heading">
+          <h3>Response history</h3>
+          <span>Select an event to inspect its evidence</span>
         </div>
         <div
-          class="response-list"
           id="responses"
-          aria-label="Response decisions"
+          class="event-list"
+          aria-label="Recorded response events"
         ></div>
         <p class="caption">
-          Controlled transformations of a CC0 photograph; not human interaction
-          footage. Queries use a finite grammar. Responses are grounded
-          templates with an injected 400 ms delay, not LLM outputs. The replay
-          shows sampled frames from a local run.
+          A replay of local inference on controlled transformations of a CC0
+          photograph. Responses use templates and an injected 400 ms delay. This
+          is recorded output, not live browser inference.
         </p>
       </section>
-      <section id="measurements" class="section">
-        <div class="section-head">
-          <span class="section-no">02</span>
-          <div>
-            <h2>Measure the waiting, too.</h2>
-            <p>
-              A faster answer is useful only when its evidence is still
-              relevant.
-            </p>
-          </div>
-        </div>
-        <div id="numbers" class="numbers"></div>
-        <img
-          class="figure"
-          src="assets/performance.svg"
-          alt="Measured latency distributions comparing latest-frame and FIFO admission policies at equal queue capacity."
-          loading="lazy"
-        />
-        <p class="caption">
-          Three runs per policy, 240 input frames per run, 30 fps, capacity 4,
-          YOLOX-s FP32, two CPU threads, Apple M4 Pro. These measurements
-          describe this workload and machine; they do not measure interaction
-          accuracy.
-          <a
-            href="https://github.com/Mingkai406/cueframe/tree/main/results/reference"
-            >Inspect raw traces ↗</a
-          >
-        </p>
-      </section>
-      <section class="section trace-section">
-        <img
-          class="figure"
-          src="assets/response-trace.svg"
-          alt="Evidence-to-decision timeline showing publication, suppression, historical reference, and clarification."
-          loading="lazy"
-        />
-      </section>
-      <section id="design" class="section">
-        <div class="section-head">
-          <span class="section-no">03</span>
-          <div>
-            <h2>A compact runtime.<br />A deliberate boundary.</h2>
-          </div>
-        </div>
-        <div class="architecture">
-          <article>
-            <span>01 / ACQUIRE</span>
-            <h3>Observe continuously.</h3>
-            <p>
-              Frame ownership, source clocks and bounded queues keep capture
-              separate from model inference.
-            </p>
-          </article>
-          <article>
-            <span>02 / ASSOCIATE</span>
-            <h3>Retain the evidence.</h3>
-            <p>
-              Local object tracks and bounded snapshots distinguish what is
-              visible now from what was observed earlier.
-            </p>
-          </article>
-          <article>
-            <span>03 / RESPOND</span>
-            <h3>Check before publishing.</h3>
-            <p>
-              Turn, age and target checks suppress superseded or stale answers.
-              Ambiguous references request clarification.
-            </p>
-          </article>
-        </div>
-        <div class="boundary">
-          <strong>Implemented now</strong>
-          <p>
-            Actual object detection · bounded concurrency · finite reference
-            queries · trace replay · response validation
-          </p>
-        </div>
-      </section>
-      <section class="section start">
-        <div>
-          <span class="eyebrow">RUN IT YOURSELF</span>
-          <h2>From a frame<br />to a trace.</h2>
-          <p>
-            Start with the included image. Connect a camera when you are ready.
-          </p>
-          <a href="https://github.com/Mingkai406/cueframe#quick-start"
-            >Build instructions ↗</a
-          >
-        </div>
-        <pre><code>python3 scripts/bootstrap.py --opencv
-cmake -S . -B build \
-  -DCMAKE_PREFIX_PATH=.deps/opencv-install
-cmake --build build -j 4
 
-./build/cueframe_run \
+      <section class="reading-section" id="behavior" data-layout="figure">
+        <div class="section-intro">
+          <h2>Temporal evidence</h2>
+          <p>
+            A current view, an earlier observation, and the distinction between
+            them.
+          </p>
+        </div>
+        <figure class="research-figure">
+          <img
+            src="assets/overview.svg"
+            width="1350"
+            height="640"
+            alt="Observe one cup, retain its earlier image when the scene is blank, and request clarification when two cups are visible."
+            loading="lazy"
+          />
+        </figure>
+      </section>
+
+      <section class="reading-section" id="measurements" data-layout="table">
+        <div class="section-intro">
+          <h2>Latency measurements</h2>
+          <p>
+            Same input, model and queue capacity. Different choices about which
+            frame waits.
+          </p>
+        </div>
+        <div class="measurement-summary">
+          <div>
+            <p class="measurement-note">Acquisition → observation</p>
+            <table>
+              <caption class="sr-only">
+                Observed latency across three runs per queue policy
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Queue policy</th>
+                  <th scope="col">Median</th>
+                  <th scope="col">p95</th>
+                </tr>
+              </thead>
+              <tbody id="metrics">
+                <tr>
+                  <th scope="row">Latest frame</th>
+                  <td>191 ms</td>
+                  <td>209 ms</td>
+                </tr>
+                <tr>
+                  <th scope="row">Bounded FIFO</th>
+                  <td>353 ms</td>
+                  <td>374 ms</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="conditions">
+            <p>YOLOX-s FP32 · Apple M4 Pro</p>
+            <p>
+              30 input fps · 4 queue slots · 2 CPU threads<br />240 frames per
+              run · 3 runs per policy
+            </p>
+            <a
+              href="https://github.com/Mingkai406/cueframe/tree/main/results/reference"
+              >View the raw measurements <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+        <figure class="research-figure">
+          <img
+            src="assets/performance.svg"
+            alt="Latency distributions, median and p95 values, and queue wait versus inference time for both policies."
+            loading="lazy"
+          />
+        </figure>
+        <p class="caption">
+          Latency includes acquisition, decode, queue wait and evidence update;
+          it excludes image export and response delay. Latest-frame admission
+          trades dropped frames for fresher evidence. These measurements
+          describe this workload, not interaction accuracy.
+        </p>
+        <details class="trace-details">
+          <summary>Inspect the evidence-to-response timeline</summary>
+          <img
+            src="assets/response-trace.svg"
+            alt="Actual response timing with publication, suppression, historical evidence and clarification."
+            loading="lazy"
+          />
+        </details>
+      </section>
+
+      <section
+        class="reading-section implementation"
+        id="implementation"
+        data-layout="definition"
+      >
+        <div>
+          <h2>Runtime design</h2>
+          <p>
+            The runtime separates capture, model execution, evidence storage and
+            response validation.
+          </p>
+          <a
+            href="https://github.com/Mingkai406/cueframe/blob/main/docs/architecture.md"
+            >Architecture and contracts <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <dl>
+          <div>
+            <dt>Bounded concurrency</dt>
+            <dd>
+              Independent capture and inference, explicit overload policies, and
+              owned frame data.
+            </dd>
+          </div>
+          <div>
+            <dt>Temporal references</dt>
+            <dd>
+              Timestamped object tracks and bounded history for current, spatial
+              and previous-object queries.
+            </dd>
+          </div>
+          <div>
+            <dt>Publication checks</dt>
+            <dd>
+              Suppress responses when a turn is superseded, a target changes, or
+              evidence expires.
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="reading-section get-started" data-layout="code">
+        <div>
+          <h2>Run locally</h2>
+          <p>No camera or API key required.</p>
+          <a href="https://github.com/Mingkai406/cueframe#quick-start"
+            >Complete setup instructions <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="code-panel">
+          <div>
+            <span>After building CueFrame</span
+            ><button id="copy-command" type="button">Copy command</button>
+          </div>
+          <pre><code id="run-command">./build/cueframe_run \
   --input examples/coffee.png \
   --frames 30 --out runs/demo</code></pre>
+        </div>
       </section>
     </main>
     <footer>
-      <div class="brand">CueFrame</div>
-      <p>
-        Visual evidence for human–AI interaction.<br />By Mingkai Gao ·
-        Engineering prototype / September 2026
-      </p>
-      <a href="https://github.com/Mingkai406/cueframe/blob/main/NOTICE"
-        >Sources & credits ↗</a
-      >
+      <span>CueFrame · Mingkai Gao</span>
+      <div>
+        <a href="https://github.com/Mingkai406/cueframe/blob/main/LICENSE"
+          >MIT license</a
+        ><a href="https://github.com/Mingkai406/cueframe/blob/main/NOTICE"
+          >Credits</a
+        ><a href="https://github.com/Mingkai406/cueframe">Source code</a>
+      </div>
     </footer>
     <script src="app.js"></script>
   </body>
