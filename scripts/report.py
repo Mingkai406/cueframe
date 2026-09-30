@@ -113,6 +113,8 @@ for t in np.arange(0, 8000, 350):
 
 def save(fig, name):
     fig.savefig(assets / (name + ".svg"), bbox_inches="tight", pad_inches=0.22)
+    svg = assets / (name + ".svg")
+    svg.write_text("\n".join(line.rstrip() for line in svg.read_text().splitlines()) + "\n")
     fig.savefig(assets / (name + ".png"), dpi=180, bbox_inches="tight", pad_inches=0.22)
     plt.close(fig)
 
