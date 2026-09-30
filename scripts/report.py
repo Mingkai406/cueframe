@@ -31,7 +31,7 @@ plt.rcParams.update(
         "xtick.color": "#536874",
         "ytick.color": "#536874",
         "axes.edgecolor": "#c9d2d5",
-        "svg.fonttype": "none",
+        "svg.fonttype": "path",
         "savefig.facecolor": "#fafbf9",
     }
 )
@@ -114,7 +114,9 @@ for t in np.arange(0, 8000, 350):
 def save(fig, name):
     fig.savefig(assets / (name + ".svg"), bbox_inches="tight", pad_inches=0.22)
     svg = assets / (name + ".svg")
-    svg.write_text("\n".join(line.rstrip() for line in svg.read_text().splitlines()) + "\n")
+    svg.write_text(
+        "\n".join(line.rstrip() for line in svg.read_text().splitlines()) + "\n"
+    )
     fig.savefig(assets / (name + ".png"), dpi=180, bbox_inches="tight", pad_inches=0.22)
     plt.close(fig)
 
@@ -140,7 +142,7 @@ for ax, t, title, caption in zip(
     ["01  Observe", "02  Remember", "03  Clarify"],
     [
         "One cup grounds a current reference.",
-        "The frame is blank; earlier evidence remains.",
+        "Earlier evidence supports “previous cup”.",
         "Two cups make “cup” ambiguous.",
     ],
 ):
@@ -148,6 +150,39 @@ for ax, t, title, caption in zip(
     ax.imshow(Image.open(folder / "frames" / f"{o['frame']}.jpg"))
     ax.set_axis_off()
     ax.set_title(title, loc="left", fontsize=13, pad=13)
+    if t == 3500:
+        historical = next(
+            r for r in responses if r["historical"] and r["status"] == "published"
+        )
+        retained = min(
+            obs, key=lambda x: abs(x["media_ms"] - historical["evidence_ms"])
+        )
+        ax.text(
+            0.5,
+            0.91,
+            "CURRENT FRAME · NO OBJECTS",
+            ha="center",
+            va="center",
+            transform=ax.transAxes,
+            fontsize=8,
+            color="#536874",
+        )
+        memory = ax.inset_axes([0.12, 0.08, 0.76, 0.69])
+        memory.imshow(Image.open(folder / "frames" / f"{retained['frame']}.jpg"))
+        memory.set_xticks([])
+        memory.set_yticks([])
+        for spine in memory.spines.values():
+            spine.set_visible(True)
+            spine.set_color("#087f82")
+            spine.set_linewidth(1.4)
+        memory.set_title(
+            f"RETAINED EVIDENCE · {retained['media_ms'] / 1000:.2f} s",
+            fontsize=8,
+            loc="left",
+            color="#087f82",
+            pad=7,
+        )
+
     ax.text(
         0,
         -0.12,
