@@ -114,7 +114,7 @@ int main(int argc, char **argv) {
     if (!events || !responses || !timings)
       throw std::runtime_error("cannot create output files");
     timings << "frame,media_ms,queue_ms,preprocess_ms,inference_ms,postprocess_ms,observation_"
-               "latency_ms,visible_tracks\n";
+               "latency_ms,visible_tracks,capture_lag_ms\n";
     cv::setNumThreads(threads);
     Detector detector(model);
     // Warm-up is excluded from steady-state measurements and recorded in the summary.
@@ -214,7 +214,10 @@ int main(int argc, char **argv) {
           double observation_latency = elapsed(frame->acquired);
           timings << frame->id << ',' << frame->media_ms << ',' << queue_ms << ','
                   << result.preprocess_ms << ',' << result.inference_ms << ','
-                  << result.postprocess_ms << ',' << observation_latency << ',' << visible << '\n';
+                  << result.postprocess_ms << ',' << observation_latency << ',' << visible << ','
+                  << std::chrono::duration<double, std::milli>(frame->acquired - started).count() -
+                         frame->media_ms
+                  << '\n';
           cv::Mat preview = frame->image.clone();
           events << "{\"frame\":" << s.frame << ",\"media_ms\":" << s.media_ms << ",\"tracks\":[";
           bool first = true;

@@ -128,3 +128,12 @@ Object association is a conservative same-class IoU heuristic, not robust re-ide
 ## License
 
 MIT for CueFrame code. Model and dependencies retain their own licenses; see [NOTICE](NOTICE). Coffee photograph: Rachel Michetti, CC0, via scikit-image.
+
+
+## Brief-event coverage under load
+
+A second experiment checks whether lower latency comes at the cost of missed short appearances.
+It runs real inference on annotated, controlled photo sequences and separates **event coverage**,
+**detection before disappearance**, queue drops, and detector misses on retained frames.
+[Inspect 12 recorded runs and reproduce the experiment](results/brief-events/README.md).
+Both policies miss some short events; freshness alone is not an accuracy guarantee.

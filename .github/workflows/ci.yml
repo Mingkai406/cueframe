@@ -13,6 +13,7 @@ jobs:
       - run: cmake -S . -B build -DCUEFRAME_VISION=OFF -DCUEFRAME_SANITIZE=ON -DCMAKE_BUILD_TYPE=Debug
       - run: cmake --build build -j 2
       - run: ctest --test-dir build --output-on-failure
+      - run: python3 -m unittest discover -s tests -p "test_*.py"
   vision:
     runs-on: ubuntu-24.04
     steps:
@@ -29,8 +30,15 @@ jobs:
       - run: cmake -S . -B build -DCMAKE_PREFIX_PATH="$PWD/.deps/opencv-install" -DCMAKE_BUILD_TYPE=Release
       - run: cmake --build build -j 2
       - run: ctest --test-dir build --output-on-failure
+      - run: python3 -m unittest discover -s tests -p "test_*.py"
       - run: ./build/cueframe_run --input examples/coffee.png --frames 2 --offline --out runs/ci
+      - run: python3 -m pip install Pillow
+      - run: python3 scripts/event_benchmark.py --repeats 1 --capacities 4 --out runs/events
       - uses: actions/upload-artifact@v4
         with:
           name: real-model-trace
-          path: runs/ci
+          path: |
+            runs/ci
+            runs/events/event-report.json
+            runs/events/*/timings.csv
+            runs/events/*/observations.jsonl

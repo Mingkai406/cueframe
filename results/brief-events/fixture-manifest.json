@@ -1,0 +1,106 @@
+{
+  "frames": 288,
+  "fps": 30,
+  "events": [
+    {
+      "id": "cup-0",
+      "start_frame": 10,
+      "end_frame": 11,
+      "duration_frames": 1
+    },
+    {
+      "id": "cup-1",
+      "start_frame": 27,
+      "end_frame": 29,
+      "duration_frames": 2
+    },
+    {
+      "id": "cup-2",
+      "start_frame": 44,
+      "end_frame": 48,
+      "duration_frames": 4
+    },
+    {
+      "id": "cup-3",
+      "start_frame": 58,
+      "end_frame": 66,
+      "duration_frames": 8
+    },
+    {
+      "id": "cup-4",
+      "start_frame": 75,
+      "end_frame": 76,
+      "duration_frames": 1
+    },
+    {
+      "id": "cup-5",
+      "start_frame": 92,
+      "end_frame": 94,
+      "duration_frames": 2
+    },
+    {
+      "id": "cup-6",
+      "start_frame": 106,
+      "end_frame": 110,
+      "duration_frames": 4
+    },
+    {
+      "id": "cup-7",
+      "start_frame": 123,
+      "end_frame": 131,
+      "duration_frames": 8
+    },
+    {
+      "id": "cup-8",
+      "start_frame": 140,
+      "end_frame": 141,
+      "duration_frames": 1
+    },
+    {
+      "id": "cup-9",
+      "start_frame": 154,
+      "end_frame": 156,
+      "duration_frames": 2
+    },
+    {
+      "id": "cup-10",
+      "start_frame": 171,
+      "end_frame": 175,
+      "duration_frames": 4
+    },
+    {
+      "id": "cup-11",
+      "start_frame": 188,
+      "end_frame": 196,
+      "duration_frames": 8
+    },
+    {
+      "id": "cup-12",
+      "start_frame": 202,
+      "end_frame": 203,
+      "duration_frames": 1
+    },
+    {
+      "id": "cup-13",
+      "start_frame": 219,
+      "end_frame": 221,
+      "duration_frames": 2
+    },
+    {
+      "id": "cup-14",
+      "start_frame": 236,
+      "end_frame": 240,
+      "duration_frames": 4
+    },
+    {
+      "id": "cup-15",
+      "start_frame": 250,
+      "end_frame": 258,
+      "duration_frames": 8
+    }
+  ],
+  "kind": "Controlled CC0 photo appearances, not natural video or a general accuracy benchmark",
+  "source": "Rachel Michetti / scikit-image coffee, CC0",
+  "source_sha256": "cc02f8ca188b167c775a7101b5d767d1e71792cf762c33d6fa15a4599b5a8de7",
+  "frame_sequence_sha256": "b05e47e468c8eaae08e2f19c3179d764421921949c6ec8a36b101d5612fcf736"
+}
